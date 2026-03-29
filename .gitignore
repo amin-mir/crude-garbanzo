@@ -1,0 +1,25 @@
+# Build output
+build/
+
+# CMake in-source build artifacts (use out-of-source builds instead)
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CPackConfig.cmake
+CPackSourceConfig.cmake
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# clangd cache
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.out
