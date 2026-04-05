@@ -1,10 +1,44 @@
-BasedOnStyle: Google
+BasedOnStyle: LLVM
 IndentWidth: 4
 TabWidth: 4
 UseTab: Never
 ColumnLimit: 120
-AllowShortFunctionsOnASingleLine: None
+
+BreakBeforeBraces: Attach
+
+# Pointer/reference attached to type: T*, T&
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Naming/spacing
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+
+# Alignment
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
 AlignConsecutiveDeclarations:
   Enabled: true
   AcrossEmptyLines: false
   AcrossComments: false
+
+# Functions
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# Includes
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  # SFML headers
+  - Regex: "^<SFML/"
+    Priority: 2
+  # Standard library
+  - Regex: "^<"
+    Priority: 3
+  # Project-local headers
+  - Regex: ".*"
+    Priority: 1
